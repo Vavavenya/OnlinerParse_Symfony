@@ -1,0 +1,14 @@
+{% for name, result in info %}
+    {% if result is iterable %}
+        {% for name, result in result %}
+            -
+            {% if result is iterable %}
+                {% for name, result in result %}
+                   --{{ name }} = {{ result }} {{ '\n'|nl2br }}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {{ name }} = {{ result }} {{ '\n'|nl2br }}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,162 @@
+{
+  "products": [
+    {
+      "id": 256,
+      "name": "Форсаж-1 (черный/красный)",
+      "full_name": "MFMaster Форсаж-1 (черный/красный)",
+      "name_prefix": "Геймерский стол",
+      "images": {
+        "header": "//content2.onliner.by/catalog/device/header/c3a5e8ac8924e1bb46599fbfc6df37ff.jpeg"
+      },
+      "description": "геймерский стол, нестандартная форма, 1400x892 мм, высота 730 мм, материал: ЛДСП (столешница), ЛДСП (опоры)",
+      "html_url": "https://catalog.onliner.by/table/mfmaster/forsag1blr",
+      "reviews": {
+        "rating": 0,
+        "count": 0,
+        "html_url": "https://catalog.onliner.by/table/mfmaster/forsag1blr/reviews",
+        "url": "https://catalog.api.onliner.by/products/forsag1blr/reviews"
+      },
+      "prices": {
+        "min": null,
+        "price_min": {
+          "amount": "260.00",
+          "currency": "BYN",
+          "converted": {
+            "BYN": {
+              "amount": "260.00",
+              "currency": "BYN"
+            },
+            "BYR": {
+              "amount": "",
+              "currency": "BYR"
+            }
+          }
+        },
+        "max": null,
+        "price_max": {
+          "amount": "316.22",
+          "currency": "BYN",
+          "converted": {
+            "BYN": {
+              "amount": "316.22",
+              "currency": "BYN"
+            },
+            "BYR": {
+              "amount": "",
+              "currency": "BYR"
+            }
+          }
+        },
+        "currency_sign": null,
+        "offers": {
+          "count": 11
+        },
+        "html_url": "https://catalog.onliner.by/table/mfmaster/forsag1blr/prices",
+        "url": "https://shop.api.onliner.by/products/forsag1blr/positions"
+      },
+      "sale": {
+        "is_on_sale": false,
+        "discount": 0,
+        "min_prices_median": {
+          "amount": "259.00",
+          "currency": "BYN"
+        }
+      },
+      "second": {
+        "offers_count": 0,
+        "min_price": null
+      },
+      "url": "https://catalog.api.onliner.by/products/forsag1blr"
+    },
+    {
+      "id": 1471529,
+      "name": "СП013 вяз светлый/металл белый",
+      "full_name": "Домус СП013 вяз светлый/металл белый",
+      "name_prefix": "Стол",
+      "extended_name": "Стол Домус СП013 вяз светлый/металл белый",
+      "status": "active",
+      "images": {
+        "header": "//content2.onliner.by/catalog/device/header/1d8f7805076ef384ade0bcc26440ccbf.jpeg",
+        "icon": null
+      },
+      "description": "стол для работы, прямоугольная форма, 1360x660 мм, высота 750 мм, материал: ЛДСП (столешница), окрашенная сталь (опоры)",
+      "html_url": "https://catalog.onliner.by/table/domus/sp013wsp0117",
+      "reviews": {
+        "rating": 30,
+        "count": 8,
+        "html_url": "https://catalog.onliner.by/table/domus/sp013wsp0117/reviews",
+        "url": "https://catalog.api.onliner.by/products/sp013wsp0117/reviews"
+      },
+      "review_url": null,
+      "prices": {
+        "min": null,
+        "price_min": {
+          "amount": "368.40",
+          "currency": "BYN",
+          "converted": {
+            "BYN": {
+              "amount": "368.40",
+              "currency": "BYN"
+            },
+            "BYR": {
+              "amount": "",
+              "currency": "BYR"
+            }
+          }
+        },
+        "max": null,
+        "price_max": {
+          "amount": "408.19",
+          "currency": "BYN",
+          "converted": {
+            "BYN": {
+              "amount": "408.19",
+              "currency": "BYN"
+            },
+            "BYR": {
+              "amount": "",
+              "currency": "BYR"
+            }
+          }
+        },
+        "currency_sign": null,
+        "offers": {
+          "count": 3
+        },
+        "html_url": "https://catalog.onliner.by/table/domus/sp013wsp0117/prices",
+        "url": "https://shop.api.onliner.by/products/sp013wsp0117/positions"
+      },
+      "max_installment_terms": {
+        "all": {
+          "term": 2,
+          "label": "Рассрочка до 2 месяцев"
+        }
+      },
+      "max_cobrand_cashback": {
+        "percentage": 5,
+        "label": "5% на «Onlíner Клевер»"
+      },
+      "sale": {
+        "is_on_sale": false,
+        "discount": 0,
+        "min_prices_median": {
+          "amount": "363.00",
+          "currency": "BYN"
+        }
+      },
+      "second": {
+        "offers_count": 0,
+        "min_price": null
+      },
+      "url": "https://catalog.api.onliner.by/products/sp013wsp0117"
+    }
+  ],
+  "total": 5324,
+  "page": {
+    "limit": 2,
+    "items": 2,
+    "current": 5,
+    "last": 2662
+  },
+  "total_ungrouped": 5324
+}

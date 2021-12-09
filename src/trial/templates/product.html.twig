@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="table caption-top">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Desc</th>
+            <th scope="col">Link</th>
+            <th scope="col">Category</th>
+            <th scope="col">Last Update</th>
+        </tr>
+        <tr>
+            <td>{{ product.id }}</td>
+            <td><a href="{{ path('onliner_get_product_by_id', {'id':product.id}) }}">{{ product.name }}</a></td>
+            <td><img src="{{ product.linkToImage }}" width="100" height="100"></td>
+            <td>{{ product.description }}</td>
+            <td><a href="{{ product.url }}">Product on Onliner</a></td>
+            <td>
+                <div>
+                    {{ form_start(form) }}
+                    {# {{ form(form.categories) }} #}
+
+                    {# {{ form_widget(form.categories.vars.prototype.name) }} #}
+                    <ul class="categories"
+                        data-index="{{ form.categories|length > 0 ? form.categories|last.vars.name + 1 : 0 }}"
+                        data-prototype="{{ form_widget(form.categories.vars.prototype)|e('html_attr') }}">
+                    </ul>
+
+                    <button type="button"
+                            onclick="addFormToCollection(this)"
+                            class="add_item_link"
+                            data-collection-holder-class="categories">
+                        Add a category
+                    </button>
+
+                    <button type="button"
+                            onclick="removeFormToCollection(this)"
+                            class="remove_item_link"
+                            data-collection-holder-class="categories">
+                        Remove
+                    </button>
+
+                    {{ form_end(form) }}
+                </div>
+            </td>
+            <td class="date">{{ product.dateLastUpdate |date('d-m-Y') }}</td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            var form = $('form[name="category_form"]');
+            form.on(
+                'submit',
+                function (e) {
+                    e.preventDefault();
+                    var $form = $(e.currentTarget);
+                    $.ajax({
+                        url: $form.attr('action'),
+                        method: 'POST',
+                        data: $form.serialize()
+                    });
+                    console.log('submitting!');
+                }
+            );
+        });
+
+        function removeFormToCollection() {
+            console.log($('div#category_form_categories div input'));
+            const inputs = document.querySelectorAll('div#category_form_categories div input');
+            for (const input of inputs) {
+                input.style.cssText += 'color:red;';
+                input.addEventListener('dblclick', function (e) {
+                    input.parentNode.parentNode.parentNode.remove();
+                });
+            }
+        }
+
+        function addFormToCollection(e) {
+            const collectionHolder = document.querySelector('.' + e.dataset.collectionHolderClass);
+
+            const item = document.createElement('li');
+            const removeButton = document.createElement('button');
+
+            console.log()
+
+            removeButton.dataset.relaitedItem = item.id;
+
+            item.innerHTML = collectionHolder
+                .dataset
+                .prototype
+                .replace(
+                    /__name__/g,
+                    collectionHolder.dataset.index
+                );
+
+            item.innerHTML = item.innerHTML.replace(
+                /readonly="readonly"/g,
+                ''
+            );
+
+            collectionHolder.appendChild(item);
+            collectionHolder.dataset.index++;
+        }
+    </script>
+{% endblock %}
+
+
